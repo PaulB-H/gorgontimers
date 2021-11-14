@@ -2,4 +2,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Comfortaa", cursive;
+  font-weight: normal;
+  color: #eeda53;
+}
+
+body {
+  padding: 20px;
+  background-color: #6e1e15;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+#dungeon-list {
+  list-style-type: none;
+}
+
+.dungeon-list-item {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.dungeon-list-item a {
+  text-decoration: none;
 }
