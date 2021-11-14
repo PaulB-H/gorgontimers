@@ -26,3 +26,20 @@ const dungeonArray = [
     ],
   },
 ];
+
+const setLastLooted = (reqDungeonName, reqChestGroup, reqChestNum) => {
+  const matchingDungeon = dungeonArray.find(
+    (dungeon) => dungeon.name === reqDungeonName
+  );
+  if (!matchingDungeon) return console.error("No matching dungeon");
+
+  const matchingChestGroup = matchingDungeon.chestGroups.find(
+    (chestGroup) => chestGroup.name === reqChestGroup
+  );
+  if (!matchingChestGroup) return console.error("No matching chest group");
+
+  if (reqChestNum < 1 || reqChestNum > matchingChestGroup.numOfChests)
+    return console.error("Invalid chest requested");
+
+  matchingChestGroup.lastLooted[reqChestNum - 1] = Date.now();
+};
