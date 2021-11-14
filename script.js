@@ -43,3 +43,43 @@ const setLastLooted = (reqDungeonName, reqChestGroup, reqChestNum) => {
 
   matchingChestGroup.lastLooted[reqChestNum - 1] = Date.now();
 };
+
+const updateTimeRemaining = () => {
+  dungeonArray.forEach((dungeon) => {
+    dungeon.chestGroups.forEach((chestGroup) => {
+      const passedMsRequired = 1000 * 60 * 60 * chestGroup.hours;
+      chestGroup.lastLooted.forEach((time, index) => {
+        if (time !== null) {
+          const timeMsElapsed = Date.now() - time;
+
+          let timeRemaining = passedMsRequired - timeMsElapsed;
+
+          if (timeRemaining <= 0) {
+            chestGroup.lastLooted[index] = null;
+            chestGroup.timeRemaining[index] = null;
+          } else {
+            const hoursLeft = Math.floor(timeRemaining / 1000 / 60 / 60)
+              .toString()
+              .padStart(2, "0");
+
+            timeRemaining -= 1000 * 60 * 60 * Math.floor(hoursLeft);
+
+            const minutesLeft = Math.floor(timeRemaining / 1000 / 60)
+              .toString()
+              .padStart(2, "0");
+
+            timeRemaining -= 1000 * 60 * Math.floor(timeRemaining / 1000 / 60);
+
+            const secondsLeft = Math.floor(timeRemaining / 1000)
+              .toString()
+              .padStart(2, "0");
+
+            chestGroup.timeRemaining[
+              index
+            ] = `${hoursLeft}:${minutesLeft}:${secondsLeft}`;
+          }
+        }
+      });
+    });
+  });
+};
