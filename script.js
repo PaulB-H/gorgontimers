@@ -83,3 +83,21 @@ const updateTimeRemaining = () => {
     });
   });
 };
+const showDungeon = (reqDungeonName) => {
+  const requestedDungeon = dungeonArray.find(
+    (dungeon) => dungeon.name === reqDungeonName
+  );
+
+  if (!requestedDungeon) return console.error("No dungeon found by that name");
+
+  document.getElementById(`${requestedDungeon.name}`).classList.remove("dnone");
+  document.getElementById("dungeon-list").classList.add("dnone");
+};
+
+const showMainPage = () => {
+  document
+    .querySelectorAll(".dungeon-section")
+    .forEach((item) => item.classList.add("dnone"));
+
+  document.getElementById("dungeon-list").classList.remove("dnone");
+};
