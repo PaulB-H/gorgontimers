@@ -132,6 +132,11 @@ const updateTimeRemaining = () => {
     });
   });
 };
+
+window.setInterval(() => {
+  updateTimeRemaining();
+}, 1000);
+
 const showDungeon = (reqDungeonName) => {
   const requestedDungeon = dungeonArray.find(
     (dungeon) => dungeon.name === reqDungeonName
