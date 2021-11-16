@@ -12,6 +12,38 @@ body {
   background-color: #6e1e15;
 }
 
+section {
+  max-width: 650px;
+}
+
+.overlay {
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dnone {
+  display: none;
+}
+
+button {
+  border: none;
+  border-radius: 2px;
+  padding: 3px 10px;
+  margin: 10px 0;
+  color: black;
+}
+
+ul,
+li {
+  list-style-type: none;
+  text-decoration: none;
+}
+
 header {
   margin-bottom: 20px;
 }
@@ -27,4 +59,16 @@ header {
 
 .dungeon-list-item a {
   text-decoration: none;
+}
+
+.dungeon-timer-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.dungeon-timer-list li {
+  margin: 5px 0;
+  width: 170px;
+  padding: 5px;
+  margin: 10px;
 }
