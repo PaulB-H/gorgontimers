@@ -51,6 +51,34 @@ const setLastLooted = (reqDungeonName, reqChestGroup, reqChestNum) => {
     `#${matchingDungeon.name} .reset-chest-${reqChestNum}-btn`
   ).disabled = false;
 };
+
+const resetChest = (reqDungeonName, reqChestGroup, reqChestNum) => {
+  const matchingDungeon = dungeonArray.find(
+    (dungeon) => dungeon.name === reqDungeonName
+  );
+  if (!matchingDungeon) return console.error("No matching dungeon");
+
+  const matchingChestGroup = matchingDungeon.chestGroups.find(
+    (chestGroup) => chestGroup.name === reqChestGroup
+  );
+  if (!matchingChestGroup) return console.error("No matching chest group");
+
+  if (reqChestNum < 1 || reqChestNum > matchingChestGroup.numOfChests)
+    return console.error("Invalid chest requested");
+
+  matchingChestGroup.lastLooted[reqChestNum - 1] = null;
+
+  document.getElementById(
+    `${reqDungeonName}Chest${reqChestNum}Remaining`
+  ).innerHTML = `00:00:00`;
+
+  document.querySelector(
+    `#${matchingDungeon.name} .loot-chest-${reqChestNum}-btn`
+  ).disabled = false;
+
+  document.querySelector(
+    `#${matchingDungeon.name} .reset-chest-${reqChestNum}-btn`
+  ).disabled = true;
 };
 
 const updateTimeRemaining = () => {
