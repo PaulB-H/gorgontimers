@@ -42,6 +42,15 @@ const setLastLooted = (reqDungeonName, reqChestGroup, reqChestNum) => {
     return console.error("Invalid chest requested");
 
   matchingChestGroup.lastLooted[reqChestNum - 1] = Date.now();
+
+  document.querySelector(
+    `#${matchingDungeon.name} .loot-chest-${reqChestNum}-btn`
+  ).disabled = true;
+
+  document.querySelector(
+    `#${matchingDungeon.name} .reset-chest-${reqChestNum}-btn`
+  ).disabled = false;
+};
 };
 
 const updateTimeRemaining = () => {
