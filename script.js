@@ -1,6 +1,6 @@
 const dungeonArray = [
   {
-    name: "Goblin Dungeon",
+    name: "GoblinDungeon",
     chestGroups: [
       {
         name: "Pre-Fog Chests",
