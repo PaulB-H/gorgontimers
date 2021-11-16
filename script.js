@@ -114,6 +114,18 @@ const updateTimeRemaining = () => {
             chestGroup.timeRemaining[
               index
             ] = `${hoursLeft}:${minutesLeft}:${secondsLeft}`;
+
+            document.getElementById(
+              `GoblinDungeonChest${index + 1}Remaining`
+            ).innerHTML = `${hoursLeft}:${minutesLeft}:${secondsLeft}`;
+
+            // Make sure buttons are still in correct state
+            document.querySelector(
+              `#${dungeon.name} .loot-chest-${index + 1}-btn`
+            ).disabled = true;
+            document.querySelector(
+              `#${dungeon.name} .reset-chest-${index + 1}-btn`
+            ).disabled = false;
           }
         }
       });
