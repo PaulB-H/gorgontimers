@@ -215,3 +215,8 @@ const resetAll = (reqDungeonName, reqChestGroup) => {
     (timer, index) => (matchingChestGroup.lastLooted[index] = null)
   );
 };
+
+const saveInterval = window.setInterval(() => {
+  const dataToSave = JSON.stringify(dungeonArray);
+  localStorage.setItem("timers", dataToSave);
+}, 50);
