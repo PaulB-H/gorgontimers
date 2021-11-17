@@ -3,21 +3,21 @@ const dungeonArray = [
     name: "GoblinDungeon",
     chestGroups: [
       {
-        name: "Pre-Fog Chests",
+        name: "Pre-FogChests",
         hours: 3,
         numOfChests: 6,
         lastLooted: [null, null, null, null, null, null],
         timeRemaining: [null, null, null, null, null, null],
       },
       {
-        name: "Red Crystal",
+        name: "RedCrystal",
         hours: 1,
         numOfChests: 2,
         lastLooted: [null, null],
         timeRemaining: [null, null],
       },
       {
-        name: "Green Crystal",
+        name: "GreenCrystal",
         hours: 1,
         numOfChests: 1,
         lastLooted: [null],
