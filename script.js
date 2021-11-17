@@ -179,3 +179,23 @@ const showMainPage = () => {
 
   document.getElementById("dungeon-list").classList.remove("dnone");
 };
+
+const lootAll = (reqDungeonName, reqChestGroup) => {
+  const matchingDungeon = dungeonArray.find(
+    (dungeon) => dungeon.name === reqDungeonName
+  );
+  if (!matchingDungeon) return console.error("No matching dungeon");
+
+  const matchingChestGroup = matchingDungeon.chestGroups.find(
+    (chestGroup) => chestGroup.name === reqChestGroup
+  );
+  if (!matchingChestGroup) return console.error("No matching chest group");
+
+  matchingChestGroup.lastLooted.forEach(
+    (timer, index) => (matchingChestGroup.lastLooted[index] = Date.now())
+  );
+
+  document
+    .querySelectorAll(`#matchingChestGroup span`)
+    .forEach((span) => (span.innerHTML = "00:00:00"));
+};
