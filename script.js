@@ -27,6 +27,17 @@ const dungeonArray = [
   },
 ];
 
+if (localStorage.getItem("timers")) {
+  let parsedTimers;
+  try {
+    parsedTimers = JSON.parse(localStorage.getItem("timers"));
+  } catch (err) {
+    console.error("Err parsing existing timer: " + err);
+  }
+
+  Object.assign(dungeonArray, parsedTimers);
+}
+
 const setLastLooted = (reqDungeonName, reqChestGroup, reqChestNum) => {
   const matchingDungeon = dungeonArray.find(
     (dungeon) => dungeon.name === reqDungeonName
