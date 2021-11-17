@@ -60,132 +60,227 @@
           <h3 style="color: black">&larr; Go back...</h3>
         </button>
         <h1>Goblin Dungeon</h1>
-        <h3>Pre-Fog Chests</h3>
-        <ul class="dungeon-timer-list">
-          <li>
-            <h3>One</h3>
-            <p>
-              Resets in:
-              <span id="GoblinDungeonChest1Remaining">00:00:00</span>
-            </p>
+        <div id="Pre-FogChests">
+          <h3>Pre-Fog Chests</h3>
+          <ul class="dungeon-timer-list">
+            <li>
+              <h3>One</h3>
+              <p>
+                Resets in:
+                <span class="chest1remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-1-btn"
+                onclick="setLastLooted(`GoblinDungeon`,`Pre-FogChests`,`1`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-1-btn"
+                onclick="resetChest(`GoblinDungeon`,`Pre-FogChests`,`1`)"
+              >
+                Reset
+              </button>
+            </li>
+            <li>
+              <h3>Two</h3>
+              <p>
+                Resets in:
+                <span class="chest2remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-2-btn"
+                onclick="setLastLooted(`GoblinDungeon`,`Pre-FogChests`,`2`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-2-btn"
+                onclick="resetChest(`GoblinDungeon`,`Pre-FogChests`,`2`)"
+              >
+                Reset
+              </button>
+            </li>
+            <li>
+              <h3>Three</h3>
+              <p>
+                Resets in:
+                <span class="chest3remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-3-btn"
+                onclick="setLastLooted(`GoblinDungeon`,`Pre-FogChests`,`3`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-3-btn"
+                onclick="resetChest(`GoblinDungeon`,`Pre-FogChests`,`3`)"
+              >
+                Reset
+              </button>
+            </li>
+            <li>
+              <h3>Four</h3>
+              <p>
+                Resets in:
+                <span class="chest4remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-4-btn"
+                onclick="setLastLooted(`GoblinDungeon`,`Pre-FogChests`,`4`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-4-btn"
+                onclick="resetChest(`GoblinDungeon`,`Pre-FogChests`,`4`)"
+              >
+                Reset
+              </button>
+            </li>
+            <li>
+              <h3>Five</h3>
+              <p>
+                Resets in:
+                <span class="chest5remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-5-btn"
+                onclick="setLastLooted(`GoblinDungeon`,`Pre-FogChests`,`5`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-5-btn"
+                onclick="resetChest(`GoblinDungeon`,`Pre-FogChests`,`5`)"
+              >
+                Reset
+              </button>
+            </li>
+            <li>
+              <h3>Six</h3>
+              <p>
+                Resets in:
+                <span class="chest6remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-6-btn"
+                onclick="setLastLooted(`GoblinDungeon`,`Pre-FogChests`,`6`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-6-btn"
+                onclick="resetChest(`GoblinDungeon`,`Pre-FogChests`,`6`)"
+              >
+                Reset
+              </button>
+            </li>
+          </ul>
+          <div style="display: flex; justify-content: space-evenly">
             <button
-              class="loot-chest-1-btn"
-              onclick="setLastLooted(`GoblinDungeon`,`Pre-Fog Chests`,`1`)"
+              onclick="lootAll('GoblinDungeon', 'Pre-FogChests')"
+              style="width: 25%"
             >
-              Loot
+              Loot All
             </button>
+            <button disabled style="width: 25%">Reset All</button>
+          </div>
+        </div>
+        <div id="RedCrystal">
+          <h3>Red Crystal</h3>
+          <ul class="dungeon-timer-list">
+            <li>
+              <h3>One</h3>
+              <p>
+                Resets in:
+                <span class="chest1remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-1-btn"
+                onclick="setLastLooted(`GoblinDungeon`,`RedCrystal`,`1`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-1-btn"
+                onclick="resetChest(`GoblinDungeon`,`RedCrystal`,`1`)"
+              >
+                Reset
+              </button>
+            </li>
+            <li>
+              <h3>Two</h3>
+              <p>
+                Resets in:
+                <span class="chest2remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-2-btn"
+                onclick="setLastLooted(`GoblinDungeon`,`RedCrystal`,`2`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-2-btn"
+                onclick="resetChest(`GoblinDungeon`,`RedCrystal`,`2`)"
+              >
+                Reset
+              </button>
+            </li>
+          </ul>
+          <div style="display: flex; justify-content: space-evenly">
             <button
-              disabled
-              class="reset-chest-1-btn"
-              onclick="resetChest(`GoblinDungeon`,`Pre-Fog Chests`,`1`)"
+              onclick="lootAll('GoblinDungeon', 'RedCrystal')"
+              style="width: 25%"
             >
-              Reset
+              Loot All
             </button>
-          </li>
-          <li id="GoblinDungeonChest2">
-            <h3>Two</h3>
-            <p>
-              Resets in:
-              <span id="GoblinDungeonChest2Remaining">00:00:00</span>
-            </p>
+            <button disabled style="width: 25%">Reset All</button>
+          </div>
+        </div>
+        <div id="GreenCrystal">
+          <h3>Green Crystal</h3>
+          <ul class="dungeon-timer-list">
+            <li>
+              <h3>One</h3>
+              <p>
+                Resets in:
+                <span class="chest1remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-1-btn"
+                onclick="setLastLooted(`GoblinDungeon`,`GreenCrystal`,`1`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-1-btn"
+                onclick="resetChest(`GoblinDungeon`,`GreenCrystal`,`1`)"
+              >
+                Reset
+              </button>
+            </li>
+          </ul>
+          <div style="display: flex; justify-content: space-evenly">
             <button
-              class="loot-chest-2-btn"
-              onclick="setLastLooted(`GoblinDungeon`,`Pre-Fog Chests`,`2`)"
+              onclick="lootAll('GoblinDungeon', 'GreenCrystal')"
+              style="width: 25%"
             >
-              Loot
+              Loot All
             </button>
-            <button
-              disabled
-              class="reset-chest-2-btn"
-              onclick="resetChest(`GoblinDungeon`,`Pre-Fog Chests`,`2`)"
-            >
-              Reset
-            </button>
-          </li>
-          <li>
-            <h3>Three</h3>
-            <p>
-              Resets in:
-              <span id="GoblinDungeonChest3Remaining">00:00:00</span>
-            </p>
-            <button
-              class="loot-chest-3-btn"
-              onclick="setLastLooted(`GoblinDungeon`,`Pre-Fog Chests`,`3`)"
-            >
-              Loot
-            </button>
-            <button
-              disabled
-              class="reset-chest-3-btn"
-              onclick="resetChest(`GoblinDungeon`,`Pre-Fog Chests`,`3`)"
-            >
-              Reset
-            </button>
-          </li>
-          <li>
-            <h3>Four</h3>
-            <p>
-              Resets in:
-              <span id="GoblinDungeonChest4Remaining">00:00:00</span>
-            </p>
-            <button
-              class="loot-chest-4-btn"
-              onclick="setLastLooted(`GoblinDungeon`,`Pre-Fog Chests`,`4`)"
-            >
-              Loot
-            </button>
-            <button
-              disabled
-              class="reset-chest-4-btn"
-              onclick="resetChest(`GoblinDungeon`,`Pre-Fog Chests`,`4`)"
-            >
-              Reset
-            </button>
-          </li>
-          <li>
-            <h3>Five</h3>
-            <p>
-              Resets in:
-              <span id="GoblinDungeonChest5Remaining">00:00:00</span>
-            </p>
-            <button
-              class="loot-chest-5-btn"
-              onclick="setLastLooted(`GoblinDungeon`,`Pre-Fog Chests`,`5`)"
-            >
-              Loot
-            </button>
-            <button
-              disabled
-              class="reset-chest-5-btn"
-              onclick="resetChest(`GoblinDungeon`,`Pre-Fog Chests`,`5`)"
-            >
-              Reset
-            </button>
-          </li>
-          <li>
-            <h3>Six</h3>
-            <p>
-              Resets in:
-              <span id="GoblinDungeonChest6Remaining">00:00:00</span>
-            </p>
-            <button
-              class="loot-chest-6-btn"
-              onclick="setLastLooted(`GoblinDungeon`,`Pre-Fog Chests`,`6`)"
-            >
-              Loot
-            </button>
-            <button
-              disabled
-              class="reset-chest-6-btn"
-              onclick="resetChest(`GoblinDungeon`,`Pre-Fog Chests`,`6`)"
-            >
-              Reset
-            </button>
-          </li>
-        </ul>
-        <div style="display: flex; justify-content: space-evenly">
-          <button disabled style="width: 25%">Loot All</button>
-          <button disabled style="width: 25%">Reset All</button>
+            <button disabled style="width: 25%">Reset All</button>
+          </div>
         </div>
       </section>
     </main>
