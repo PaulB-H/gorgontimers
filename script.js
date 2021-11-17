@@ -44,11 +44,11 @@ const setLastLooted = (reqDungeonName, reqChestGroup, reqChestNum) => {
   matchingChestGroup.lastLooted[reqChestNum - 1] = Date.now();
 
   document.querySelector(
-    `#${matchingDungeon.name} .loot-chest-${reqChestNum}-btn`
+    `#${matchingChestGroup.name} .loot-chest-${reqChestNum}-btn`
   ).disabled = true;
 
   document.querySelector(
-    `#${matchingDungeon.name} .reset-chest-${reqChestNum}-btn`
+    `#${matchingChestGroup.name} .reset-chest-${reqChestNum}-btn`
   ).disabled = false;
 };
 
@@ -68,16 +68,16 @@ const resetChest = (reqDungeonName, reqChestGroup, reqChestNum) => {
 
   matchingChestGroup.lastLooted[reqChestNum - 1] = null;
 
-  document.getElementById(
-    `${reqDungeonName}Chest${reqChestNum}Remaining`
+  document.querySelector(
+    `#${matchingChestGroup.name} .chest${reqChestNum}remaining`
   ).innerHTML = `00:00:00`;
 
   document.querySelector(
-    `#${matchingDungeon.name} .loot-chest-${reqChestNum}-btn`
+    `#${matchingChestGroup.name} .loot-chest-${reqChestNum}-btn`
   ).disabled = false;
 
   document.querySelector(
-    `#${matchingDungeon.name} .reset-chest-${reqChestNum}-btn`
+    `#${matchingChestGroup.name} .reset-chest-${reqChestNum}-btn`
   ).disabled = true;
 };
 
@@ -94,6 +94,18 @@ const updateTimeRemaining = () => {
           if (timeRemaining <= 0) {
             chestGroup.lastLooted[index] = null;
             chestGroup.timeRemaining[index] = null;
+
+            document.querySelector(
+              `#${chestGroup.name} .chest${index + 1}remaining`
+            ).innerHTML = `00:00:00`;
+
+            // Make sure buttons are still in correct state
+            document.querySelector(
+              `#${chestGroup.name} .loot-chest-${index + 1}-btn`
+            ).disabled = false;
+            document.querySelector(
+              `#${chestGroup.name} .reset-chest-${index + 1}-btn`
+            ).disabled = true;
           } else {
             const hoursLeft = Math.floor(timeRemaining / 1000 / 60 / 60)
               .toString()
@@ -115,18 +127,30 @@ const updateTimeRemaining = () => {
               index
             ] = `${hoursLeft}:${minutesLeft}:${secondsLeft}`;
 
-            document.getElementById(
-              `GoblinDungeonChest${index + 1}Remaining`
+            document.querySelector(
+              `#${chestGroup.name} .chest${index + 1}remaining`
             ).innerHTML = `${hoursLeft}:${minutesLeft}:${secondsLeft}`;
 
             // Make sure buttons are still in correct state
             document.querySelector(
-              `#${dungeon.name} .loot-chest-${index + 1}-btn`
+              `#${chestGroup.name} .loot-chest-${index + 1}-btn`
             ).disabled = true;
             document.querySelector(
-              `#${dungeon.name} .reset-chest-${index + 1}-btn`
+              `#${chestGroup.name} .reset-chest-${index + 1}-btn`
             ).disabled = false;
           }
+        } else {
+          document.querySelector(
+            `#${chestGroup.name} .chest${index + 1}remaining`
+          ).innerHTML = `00:00:00`;
+
+          // Make sure buttons are still in correct state
+          document.querySelector(
+            `#${chestGroup.name} .loot-chest-${index + 1}-btn`
+          ).disabled = false;
+          document.querySelector(
+            `#${chestGroup.name} .reset-chest-${index + 1}-btn`
+          ).disabled = true;
         }
       });
     });
