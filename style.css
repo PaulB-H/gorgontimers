@@ -60,6 +60,9 @@ header {
 .dungeon-list-item a {
   text-decoration: none;
 }
+.dungeon-list-item span {
+  margin-left: 10px;
+}
 
 .dungeon-timer-list {
   display: flex;

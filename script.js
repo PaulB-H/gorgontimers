@@ -231,3 +231,24 @@ const saveInterval = window.setInterval(() => {
   const dataToSave = JSON.stringify(dungeonArray);
   localStorage.setItem("timers", dataToSave);
 }, 50);
+
+const calculateAvailableChests = window.setInterval(() => {
+  dungeonArray.forEach((dungeon) => {
+    let availableString = "";
+
+    dungeon.chestGroups.forEach((chestGroup) => {
+      chestGroup.hours;
+      let availableChests = 0;
+      chestGroup.lastLooted.forEach((timer) => {
+        if (timer === null) {
+          availableChests++;
+        }
+      });
+
+      availableString += `${chestGroup.hours}h (${availableChests}/${chestGroup.lastLooted.length}) `;
+    });
+
+    document.getElementById(`${dungeon.name}-totals`).innerHTML =
+      availableString;
+  });
+}, 100);
