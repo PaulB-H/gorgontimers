@@ -135,6 +135,18 @@ const dungeonArray = [
       },
     ],
   },
+  {
+    name: "FishBowlCavern",
+    chestGroups: [
+      {
+        name: "FishBowlTwo",
+        hours: 24,
+        numOfChests: 2,
+        lastLooted: [null, null],
+        timeRemaining: [null, null],
+      },
+    ],
+  },
 ];
 
 if (localStorage.getItem("timers")) {
