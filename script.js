@@ -12,6 +12,18 @@ const dungeonArray = [
     ],
   },
   {
+    name: "BrainBugCave",
+    chestGroups: [
+      {
+        name: "BrainBugCaveOne",
+        hours: 3,
+        numOfChests: 1,
+        lastLooted: [null],
+        timeRemaining: [null],
+      },
+    ],
+  },
+  {
     name: "GoblinDungeon",
     chestGroups: [
       {

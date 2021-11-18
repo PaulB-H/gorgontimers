@@ -28,8 +28,13 @@
             <sup><span id="SerbuleSewers-totals"></span></sup
           ></a>
         </li>
+        <li class="dungeon-list-item">
+          <a href="#" onclick="showDungeon('BrainBugCave')">
+            Brain Bug Cave<br />
+            <sup><span id="BrainBugCave-totals"></span></sup
+          ></a>
+        </li>
         <strike>
-          <li class="dungeon-list-item"><a href="#">Brain Bug Cave</a></li>
           <li class="dungeon-list-item"><a href="#">Ranalon Den</a></li>
           <li class="dungeon-list-item"><a href="#">Serbule Crypt</a></li>
           <li class="dungeon-list-item">
@@ -80,6 +85,37 @@
                 disabled
                 class="reset-chest-1-btn"
                 onclick="resetChest(`SerbuleSewers`,`SerbuleSewersOne`,`1`)"
+              >
+                Reset
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="BrainBugCave" class="dnone dungeon-section">
+        <button onclick="showMainPage()">
+          <h3 style="color: black">&larr; Go back...</h3>
+        </button>
+        <h1>Brain Bug Cave</h1>
+        <div id="BrainBugCaveOne">
+          <h3>One Lonely Chest</h3>
+          <ul class="dungeon-timer-list">
+            <li>
+              <h3>One</h3>
+              <p>
+                Resets in:
+                <span class="chest1remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-1-btn"
+                onclick="setLastLooted(`BrainBugCave`,`BrainBugCaveOne`,`1`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-1-btn"
+                onclick="resetChest(`BrainBugCave`,`BrainBugCaveOne`,`1`)"
               >
                 Reset
               </button>
