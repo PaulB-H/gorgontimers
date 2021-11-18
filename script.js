@@ -1,5 +1,17 @@
 const dungeonArray = [
   {
+    name: "SerbuleSewers",
+    chestGroups: [
+      {
+        name: "SerbuleSewersOne",
+        hours: 24,
+        numOfChests: 1,
+        lastLooted: [null],
+        timeRemaining: [null],
+      },
+    ],
+  },
+  {
     name: "GoblinDungeon",
     chestGroups: [
       {
