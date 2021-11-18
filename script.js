@@ -97,6 +97,18 @@ const dungeonArray = [
       },
     ],
   },
+  {
+    name: "HogansBasement",
+    chestGroups: [
+      {
+        name: "JunkOrnateRubgag",
+        hours: 24,
+        numOfChests: 3,
+        lastLooted: [null, null, null],
+        timeRemaining: [null, null, null],
+      },
+    ],
+  },
 ];
 
 if (localStorage.getItem("timers")) {

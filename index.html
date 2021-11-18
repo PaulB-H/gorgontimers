@@ -64,9 +64,13 @@
             <sup><span id="AnimalNexus-totals"></span></sup>
           </a>
         </li>
+        <li class="dungeon-list-item">
+          <a href="#" onclick="showDungeon('HogansBasement')">
+            Hogan's Basement<br />
+            <sup><span id="HogansBasement-totals"></span></sup>
+          </a>
+        </li>
         <strike>
-          <li class="dungeon-list-item"><a href="#">Animal Nexus</a></li>
-          <li class="dungeon-list-item"><a href="#">Hogan's Basement</a></li>
           <li class="dungeon-list-item"><a href="#">Yeti Cave</a></li>
           <li class="dungeon-list-item"><a href="#">Fish Bowl Cavern</a></li>
           <li class="dungeon-list-item"><a href="#">Borghild</a></li>
@@ -781,6 +785,91 @@
             </button>
             <button
               onclick="resetAll('AnimalNexus', 'AnimalNexusThree')"
+              style="width: 25%"
+            >
+              Reset All
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="HogansBasement" class="dnone dungeon-section">
+        <button onclick="showMainPage()">
+          <h3 style="color: black">&larr; Go back...</h3>
+        </button>
+        <h1>Hogan's Basement</h1>
+        <div id="JunkOrnateRubgag">
+          <h3>Junk Box, Ornate, Rubgag</h3>
+          <ul class="dungeon-timer-list">
+            <li>
+              <h3>Junk Box</h3>
+              <p>
+                Resets in:
+                <span class="chest1remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-1-btn"
+                onclick="setLastLooted(`HogansBasement`,`JunkOrnateRubgag`,`1`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-1-btn"
+                onclick="resetChest(`HogansBasement`,`JunkOrnateRubgag`,`1`)"
+              >
+                Reset
+              </button>
+            </li>
+            <li>
+              <h3>Ornate Chest</h3>
+              <p>
+                Resets in:
+                <span class="chest2remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-2-btn"
+                onclick="setLastLooted(`HogansBasement`,`JunkOrnateRubgag`,`2`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-2-btn"
+                onclick="resetChest(`HogansBasement`,`JunkOrnateRubgag`,`2`)"
+              >
+                Reset
+              </button>
+            </li>
+            <li>
+              <h3>Rubgag's Chest</h3>
+              <p>
+                Resets in:
+                <span class="chest3remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-3-btn"
+                onclick="setLastLooted(`HogansBasement`,`JunkOrnateRubgag`,`3`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-3-btn"
+                onclick="resetChest(`HogansBasement`,`JunkOrnateRubgag`,`3`)"
+              >
+                Reset
+              </button>
+            </li>
+          </ul>
+          <div style="display: flex; justify-content: space-evenly">
+            <button
+              onclick="lootAll('HogansBasement', 'JunkOrnateRubgag')"
+              style="width: 25%"
+            >
+              Loot All
+            </button>
+            <button
+              onclick="resetAll('HogansBasement', 'JunkOrnateRubgag')"
               style="width: 25%"
             >
               Reset All
