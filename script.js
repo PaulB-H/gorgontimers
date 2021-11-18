@@ -131,8 +131,11 @@ const updateTimeRemaining = () => {
           let timeRemaining = passedMsRequired - timeMsElapsed;
 
           if (timeRemaining <= 0) {
+            // Found a timer that expired
             chestGroup.lastLooted[index] = null;
             chestGroup.timeRemaining[index] = null;
+
+            saveData();
 
             document.querySelector(
               `#${chestGroup.name} .chest${index + 1}remaining`
@@ -146,6 +149,7 @@ const updateTimeRemaining = () => {
               `#${chestGroup.name} .reset-chest-${index + 1}-btn`
             ).disabled = true;
           } else {
+            // Timer not expired, continue with update
             const hoursLeft = Math.floor(timeRemaining / 1000 / 60 / 60)
               .toString()
               .padStart(2, "0");
