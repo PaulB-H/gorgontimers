@@ -24,6 +24,18 @@ const dungeonArray = [
     ],
   },
   {
+    name: "RanalonDen",
+    chestGroups: [
+      {
+        name: "WestNorthEast",
+        hours: 3,
+        numOfChests: 3,
+        lastLooted: [null, null, null],
+        timeRemaining: [null, null, null],
+      },
+    ],
+  },
+  {
     name: "GoblinDungeon",
     chestGroups: [
       {
