@@ -71,7 +71,11 @@ header {
 }
 .dungeon-timer-list li {
   margin: 5px 0;
-  width: 170px;
-  padding: 5px;
-  margin: 10px;
+  width: 160px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 5px;
+  }
 }
