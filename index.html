@@ -58,6 +58,12 @@
             <sup><span id="MyconianCave-totals"></span></sup>
           </a>
         </li>
+        <li class="dungeon-list-item">
+          <a href="#" onclick="showDungeon('AnimalNexus')">
+            Animal Nexus<br />
+            <sup><span id="AnimalNexus-totals"></span></sup>
+          </a>
+        </li>
         <strike>
           <li class="dungeon-list-item"><a href="#">Animal Nexus</a></li>
           <li class="dungeon-list-item"><a href="#">Hogan's Basement</a></li>
@@ -690,6 +696,91 @@
             </button>
             <button
               onclick="resetAll('MyconianCave', 'EastPoe')"
+              style="width: 25%"
+            >
+              Reset All
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="AnimalNexus" class="dnone dungeon-section">
+        <button onclick="showMainPage()">
+          <h3 style="color: black">&larr; Go back...</h3>
+        </button>
+        <h1>Animal Nexts</h1>
+        <div id="AnimalNexusThree">
+          <h3>En-Route to The Magnifier</h3>
+          <ul class="dungeon-timer-list">
+            <li>
+              <h3>One</h3>
+              <p>
+                Resets in:
+                <span class="chest1remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-1-btn"
+                onclick="setLastLooted(`AnimalNexus`,`AnimalNexusThree`,`1`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-1-btn"
+                onclick="resetChest(`AnimalNexus`,`AnimalNexusThree`,`1`)"
+              >
+                Reset
+              </button>
+            </li>
+            <li>
+              <h3>Two</h3>
+              <p>
+                Resets in:
+                <span class="chest2remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-2-btn"
+                onclick="setLastLooted(`AnimalNexus`,`AnimalNexusThree`,`2`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-2-btn"
+                onclick="resetChest(`AnimalNexus`,`AnimalNexusThree`,`2`)"
+              >
+                Reset
+              </button>
+            </li>
+            <li>
+              <h3>Three</h3>
+              <p>
+                Resets in:
+                <span class="chest3remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-3-btn"
+                onclick="setLastLooted(`AnimalNexus`,`AnimalNexusThree`,`3`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-3-btn"
+                onclick="resetChest(`AnimalNexus`,`AnimalNexusThree`,`3`)"
+              >
+                Reset
+              </button>
+            </li>
+          </ul>
+          <div style="display: flex; justify-content: space-evenly">
+            <button
+              onclick="lootAll('AnimalNexus', 'AnimalNexusThree')"
+              style="width: 25%"
+            >
+              Loot All
+            </button>
+            <button
+              onclick="resetAll('AnimalNexus', 'AnimalNexusThree')"
               style="width: 25%"
             >
               Reset All

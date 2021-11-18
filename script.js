@@ -85,6 +85,18 @@ const dungeonArray = [
       },
     ],
   },
+  {
+    name: "AnimalNexus",
+    chestGroups: [
+      {
+        name: "AnimalNexusThree",
+        hours: 24,
+        numOfChests: 3,
+        lastLooted: [null, null, null],
+        timeRemaining: [null, null, null],
+      },
+    ],
+  },
 ];
 
 if (localStorage.getItem("timers")) {
