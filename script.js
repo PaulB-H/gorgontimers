@@ -147,6 +147,18 @@ const dungeonArray = [
       },
     ],
   },
+  {
+    name: "Borghild",
+    chestGroups: [
+      {
+        name: "MostlyTraps",
+        hours: 24,
+        numOfChests: 6,
+        lastLooted: [null, null, null, null, null, null],
+        timeRemaining: [null, null, null, null, null, null],
+      },
+    ],
+  },
 ];
 
 if (localStorage.getItem("timers")) {
