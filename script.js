@@ -109,6 +109,32 @@ const dungeonArray = [
       },
     ],
   },
+  {
+    name: "YetiCave",
+    chestGroups: [
+      {
+        name: "YetiFloorOne",
+        hours: 24,
+        numOfChests: 2,
+        lastLooted: [null, null],
+        timeRemaining: [null, null],
+      },
+      {
+        name: "YetiFloorTwo",
+        hours: 24,
+        numOfChests: 2,
+        lastLooted: [null, null],
+        timeRemaining: [null, null],
+      },
+      {
+        name: "YetiFloorThree",
+        hours: 24,
+        numOfChests: 2,
+        lastLooted: [null, null],
+        timeRemaining: [null, null],
+      },
+    ],
+  },
 ];
 
 if (localStorage.getItem("timers")) {

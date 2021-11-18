@@ -70,8 +70,13 @@
             <sup><span id="HogansBasement-totals"></span></sup>
           </a>
         </li>
+        <li class="dungeon-list-item">
+          <a href="#" onclick="showDungeon('YetiCave')">
+            Yeti Cave<br />
+            <sup><span id="YetiCave-totals"></span></sup>
+          </a>
+        </li>
         <strike>
-          <li class="dungeon-list-item"><a href="#">Yeti Cave</a></li>
           <li class="dungeon-list-item"><a href="#">Fish Bowl Cavern</a></li>
           <li class="dungeon-list-item"><a href="#">Borghild</a></li>
           <li class="dungeon-list-item"><a href="#">Dark Chapel</a></li>
@@ -870,6 +875,189 @@
             </button>
             <button
               onclick="resetAll('HogansBasement', 'JunkOrnateRubgag')"
+              style="width: 25%"
+            >
+              Reset All
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="YetiCave" class="dnone dungeon-section">
+        <button onclick="showMainPage()">
+          <h3 style="color: black">&larr; Go back...</h3>
+        </button>
+        <h1>Yeti Cave</h1>
+        <div id="YetiFloorOne">
+          <h3>Floor One</h3>
+          <ul class="dungeon-timer-list">
+            <li>
+              <h3>One</h3>
+              <p>
+                Resets in:
+                <span class="chest1remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-1-btn"
+                onclick="setLastLooted(`YetiCave`,`YetiFloorOne`,`1`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-1-btn"
+                onclick="resetChest(`YetiCave`,`YetiFloorOne`,`1`)"
+              >
+                Reset
+              </button>
+            </li>
+            <li>
+              <h3>Two</h3>
+              <p>
+                Resets in:
+                <span class="chest2remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-2-btn"
+                onclick="setLastLooted(`YetiCave`,`YetiFloorOne`,`2`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-2-btn"
+                onclick="resetChest(`YetiCave`,`YetiFloorOne`,`2`)"
+              >
+                Reset
+              </button>
+            </li>
+          </ul>
+          <div style="display: flex; justify-content: space-evenly">
+            <button
+              onclick="lootAll('YetiCave', 'YetiFloorOne')"
+              style="width: 25%"
+            >
+              Loot All
+            </button>
+            <button
+              onclick="resetAll('YetiCave', 'YetiFloorOne')"
+              style="width: 25%"
+            >
+              Reset All
+            </button>
+          </div>
+        </div>
+        <div id="YetiFloorTwo">
+          <h3>Floor Two</h3>
+          <ul class="dungeon-timer-list">
+            <li>
+              <h3>Urragher</h3>
+              <p>
+                Resets in:
+                <span class="chest1remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-1-btn"
+                onclick="setLastLooted(`YetiCave`,`YetiFloorTwo`,`1`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-1-btn"
+                onclick="resetChest(`YetiCave`,`YetiFloorTwo`,`1`)"
+              >
+                Reset
+              </button>
+            </li>
+            <li>
+              <h3>BloodSoaker</h3>
+              <p>
+                Resets in:
+                <span class="chest2remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-2-btn"
+                onclick="setLastLooted(`YetiCave`,`YetiFloorTwo`,`2`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-2-btn"
+                onclick="resetChest(`YetiCave`,`YetiFloorTwo`,`2`)"
+              >
+                Reset
+              </button>
+            </li>
+          </ul>
+          <div style="display: flex; justify-content: space-evenly">
+            <button
+              onclick="lootAll('YetiCave', 'YetiFloorTwo')"
+              style="width: 25%"
+            >
+              Loot All
+            </button>
+            <button
+              onclick="resetAll('YetiCave', 'YetiFloorTwo')"
+              style="width: 25%"
+            >
+              Reset All
+            </button>
+          </div>
+        </div>
+        <div id="YetiFloorThree">
+          <h3>Floor Three</h3>
+          <ul class="dungeon-timer-list">
+            <li>
+              <h3>One</h3>
+              <p>
+                Resets in:
+                <span class="chest1remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-1-btn"
+                onclick="setLastLooted(`YetiCave`,`YetiFloorThree`,`1`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-1-btn"
+                onclick="resetChest(`YetiCave`,`YetiFloorThree`,`1`)"
+              >
+                Reset
+              </button>
+            </li>
+            <li>
+              <h3>Chitterface</h3>
+              <p>
+                Resets in:
+                <span class="chest2remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-2-btn"
+                onclick="setLastLooted(`YetiCave`,`YetiFloorThree`,`2`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-2-btn"
+                onclick="resetChest(`YetiCave`,`YetiFloorThree`,`2`)"
+              >
+                Reset
+              </button>
+            </li>
+          </ul>
+          <div style="display: flex; justify-content: space-evenly">
+            <button
+              onclick="lootAll('YetiCave', 'YetiFloorThree')"
+              style="width: 25%"
+            >
+              Loot All
+            </button>
+            <button
+              onclick="resetAll('YetiCave', 'YetiFloorThree')"
               style="width: 25%"
             >
               Reset All
