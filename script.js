@@ -85,6 +85,8 @@ const setLastLooted = (reqDungeonName, reqChestGroup, reqChestNum) => {
   document.querySelector(
     `#${matchingChestGroup.name} .reset-chest-${reqChestNum}-btn`
   ).disabled = false;
+
+  saveData();
 };
 
 const resetChest = (reqDungeonName, reqChestGroup, reqChestNum) => {
@@ -114,6 +116,8 @@ const resetChest = (reqDungeonName, reqChestGroup, reqChestNum) => {
   document.querySelector(
     `#${matchingChestGroup.name} .reset-chest-${reqChestNum}-btn`
   ).disabled = true;
+
+  saveData();
 };
 
 const updateTimeRemaining = () => {
@@ -233,6 +237,8 @@ const lootAll = (reqDungeonName, reqChestGroup) => {
   document
     .querySelectorAll(`#matchingChestGroup span`)
     .forEach((span) => (span.innerHTML = "00:00:00"));
+
+  saveData();
 };
 
 const resetAll = (reqDungeonName, reqChestGroup) => {
@@ -249,12 +255,14 @@ const resetAll = (reqDungeonName, reqChestGroup) => {
   matchingChestGroup.lastLooted.forEach(
     (timer, index) => (matchingChestGroup.lastLooted[index] = null)
   );
+
+  saveData();
 };
 
-const saveInterval = window.setInterval(() => {
+const saveData = () => {
   const dataToSave = JSON.stringify(dungeonArray);
   localStorage.setItem("timers", dataToSave);
-}, 50);
+};
 
 const calculateAvailableChests = window.setInterval(() => {
   dungeonArray.forEach((dungeon) => {
