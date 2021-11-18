@@ -1,10 +1,10 @@
 <h1>Gorgon Timers</h1>
 
-<img src="" />
+<img src="https://raw.githubusercontent.com/PaulB-H/gorgontimers/main/readme_img.PNG" alt="" />
 
 <h5><small>Made with:</small><br /> HTML, CSS, JS</h5>
 
-<strike><a href="#">Live link</a></strike>
+<a href="https://paulb-h.github.io/gorgontimers/" target="_blank">paulb-h.github.io/gorgontimers/</a>
 
 <h2>Description</h2>
 <p>An app to keep track of timers in an online game</p>
