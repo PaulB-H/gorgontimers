@@ -52,8 +52,13 @@
             <sup><span id="GoblinDungeon-totals"></span></sup>
           </a>
         </li>
+        <li class="dungeon-list-item">
+          <a href="#" onclick="showDungeon('MyconianCave')">
+            Myconian Cave<br />
+            <sup><span id="MyconianCave-totals"></span></sup>
+          </a>
+        </li>
         <strike>
-          <li class="dungeon-list-item"><a href="#">Myconian Cave</a></li>
           <li class="dungeon-list-item"><a href="#">Animal Nexus</a></li>
           <li class="dungeon-list-item"><a href="#">Hogan's Basement</a></li>
           <li class="dungeon-list-item"><a href="#">Yeti Cave</a></li>
@@ -620,6 +625,71 @@
             </button>
             <button
               onclick="resetAll('GoblinDungeon', 'GreenCrystal')"
+              style="width: 25%"
+            >
+              Reset All
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="MyconianCave" class="dnone dungeon-section">
+        <button onclick="showMainPage()">
+          <h3 style="color: black">&larr; Go back...</h3>
+        </button>
+        <h1>Dungeon Name</h1>
+        <div id="EastPoe">
+          <h3>Chest Group Name</h3>
+          <ul class="dungeon-timer-list">
+            <li>
+              <h3>East</h3>
+              <p>
+                Resets in:
+                <span class="chest1remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-1-btn"
+                onclick="setLastLooted(`MyconianCave`,`EastPoe`,`1`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-1-btn"
+                onclick="resetChest(`MyconianCave`,`EastPoe`,`1`)"
+              >
+                Reset
+              </button>
+            </li>
+            <li>
+              <h3>Poe</h3>
+              <p>
+                Resets in:
+                <span class="chest2remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-2-btn"
+                onclick="setLastLooted(`MyconianCave`,`EastPoe`,`2`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-2-btn"
+                onclick="resetChest(`MyconianCave`,`EastPoe`,`2`)"
+              >
+                Reset
+              </button>
+            </li>
+          </ul>
+          <div style="display: flex; justify-content: space-evenly">
+            <button
+              onclick="lootAll('MyconianCave', 'EastPoe')"
+              style="width: 25%"
+            >
+              Loot All
+            </button>
+            <button
+              onclick="resetAll('MyconianCave', 'EastPoe')"
               style="width: 25%"
             >
               Reset All

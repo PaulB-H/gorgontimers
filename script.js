@@ -73,6 +73,18 @@ const dungeonArray = [
       },
     ],
   },
+  {
+    name: "MyconianCave",
+    chestGroups: [
+      {
+        name: "EastPoe",
+        hours: 24,
+        numOfChests: 2,
+        lastLooted: [null, null],
+        timeRemaining: [null, null],
+      },
+    ],
+  },
 ];
 
 if (localStorage.getItem("timers")) {
