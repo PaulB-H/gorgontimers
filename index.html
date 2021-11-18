@@ -40,8 +40,10 @@
             <sup><span id="RanalonDen-totals"></span></sup
           ></a>
         </li>
+        <li class="dungeon-list-item"><a href="#" onclick="showDungeon('SerbuleCrypt')">Serbule Crypt<br />
+            <sup><span id="SerbuleCrypt-totals"></span></a></li>
         <strike>
-          <li class="dungeon-list-item"><a href="#">Serbule Crypt</a></li>
+          
           <li class="dungeon-list-item">
             <a href="#">Eltibule Crypt</a>
           </li>
@@ -272,6 +274,111 @@
             </button>
             <button
               onclick="resetAll('RanalonDen', 'WestNorthEast')"
+              style="width: 25%"
+            >
+              Reset All
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="SerbuleCrypt" class="dnone dungeon-section">
+        <button onclick="showMainPage()">
+          <h3 style="color: black">&larr; Go back...</h3>
+        </button>
+        <h1>Serbule Crypt</h1>
+        <div id="SerbuleCryptFour">
+          <h3>En-Route to Rhino Guardian</h3>
+          <ul class="dungeon-timer-list">
+            <li>
+              <h3>One</h3>
+              <p>
+                Resets in:
+                <span class="chest1remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-1-btn"
+                onclick="setLastLooted(`SerbuleCrypt`,`SerbuleCryptFour`,`1`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-1-btn"
+                onclick="resetChest(`SerbuleCrypt`,`SerbuleCryptFour`,`1`)"
+              >
+                Reset
+              </button>
+            </li>
+            <li>
+              <h3>Two</h3>
+              <p>
+                Resets in:
+                <span class="chest2remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-2-btn"
+                onclick="setLastLooted(`SerbuleCrypt`,`SerbuleCryptFour`,`2`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-2-btn"
+                onclick="resetChest(`SerbuleCrypt`,`SerbuleCryptFour`,`2`)"
+              >
+                Reset
+              </button>
+            </li>
+            <li>
+              <h3>Three</h3>
+              <p>
+                Resets in:
+                <span class="chest3remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-3-btn"
+                onclick="setLastLooted(`SerbuleCrypt`,`SerbuleCryptFour`,`3`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-3-btn"
+                onclick="resetChest(`SerbuleCrypt`,`SerbuleCryptFour`,`3`)"
+              >
+                Reset
+              </button>
+            </li>
+            <li>
+              <h3>Four</h3>
+              <p>
+                Resets in:
+                <span class="chest4remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-4-btn"
+                onclick="setLastLooted(`SerbuleCrypt`,`SerbuleCryptFour`,`4`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-4-btn"
+                onclick="resetChest(`SerbuleCrypt`,`SerbuleCryptFour`,`4`)"
+              >
+                Reset
+              </button>
+            </li>
+          </ul>
+          <div style="display: flex; justify-content: space-evenly">
+            <button
+              onclick="lootAll('SerbuleCrypt', 'SerbuleCryptFour')"
+              style="width: 25%"
+            >
+              Loot All
+            </button>
+            <button
+              onclick="resetAll('SerbuleCrypt', 'SerbuleCryptFour')"
               style="width: 25%"
             >
               Reset All

@@ -36,6 +36,18 @@ const dungeonArray = [
     ],
   },
   {
+    name: "SerbuleCrypt",
+    chestGroups: [
+      {
+        name: "SerbuleCryptFour",
+        hours: 1,
+        numOfChests: 4,
+        lastLooted: [null, null, null, null],
+        timeRemaining: [null, null, null, null],
+      },
+    ],
+  },
+  {
     name: "GoblinDungeon",
     chestGroups: [
       {
