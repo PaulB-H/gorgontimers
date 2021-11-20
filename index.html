@@ -88,8 +88,13 @@
             <sup><span id="Borghild-totals"></span></sup>
           </a>
         </li>
+        <li class="dungeon-list-item">
+          <a href="#" onclick="showDungeon('DarkChapel')">
+            Dark Chapel<br />
+            <sup><span id="DarkChapel-totals"></span></sup>
+          </a>
+        </li>
         <strike>
-          <li class="dungeon-list-item"><a href="#">Dark Chapel</a></li>
           <li class="dungeon-list-item"><a href="#">Winter Nexus</a></li>
           <li class="dungeon-list-item"><a href="#">Wolf Cave</a></li>
           <li class="dungeon-list-item"><a href="#">Labyrinth</a></li>
@@ -1278,6 +1283,111 @@
             </button>
             <button
               onclick="resetAll('Borghild', 'MostlyTraps')"
+              style="width: 25%"
+            >
+              Reset All
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="DarkChapel" class="dnone dungeon-section">
+        <button onclick="showMainPage()">
+          <h3 style="color: black">&larr; Go back...</h3>
+        </button>
+        <h1>Dark Chapel</h1>
+        <div id="DarkChapelFour">
+          <h3>Dark Four</h3>
+          <ul class="dungeon-timer-list">
+            <li>
+              <h3>One</h3>
+              <p>
+                Resets in:
+                <span class="chest1remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-1-btn"
+                onclick="setLastLooted(`DarkChapel`,`DarkChapelFour`,`1`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-1-btn"
+                onclick="resetChest(`DarkChapel`,`DarkChapelFour`,`1`)"
+              >
+                Reset
+              </button>
+            </li>
+            <li>
+              <h3>Scion</h3>
+              <p>
+                Resets in:
+                <span class="chest2remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-2-btn"
+                onclick="setLastLooted(`DarkChapel`,`DarkChapelFour`,`2`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-2-btn"
+                onclick="resetChest(`DarkChapel`,`DarkChapelFour`,`2`)"
+              >
+                Reset
+              </button>
+            </li>
+            <li>
+              <h3>Spiderlord</h3>
+              <p>
+                Resets in:
+                <span class="chest3remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-3-btn"
+                onclick="setLastLooted(`DarkChapel`,`DarkChapelFour`,`3`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-3-btn"
+                onclick="resetChest(`DarkChapel`,`DarkChapelFour`,`3`)"
+              >
+                Reset
+              </button>
+            </li>
+            <li>
+              <h3>Mother Snail</h3>
+              <p>
+                Resets in:
+                <span class="chest4remaining">00:00:00</span>
+              </p>
+              <button
+                class="loot-chest-4-btn"
+                onclick="setLastLooted(`DarkChapel`,`DarkChapelFour`,`4`)"
+              >
+                Loot
+              </button>
+              <button
+                disabled
+                class="reset-chest-3-btn"
+                onclick="resetChest(`DarkChapel`,`DarkChapelFour`,`4`)"
+              >
+                Reset
+              </button>
+            </li>
+          </ul>
+          <div style="display: flex; justify-content: space-evenly">
+            <button
+              onclick="lootAll('DarkChapel', 'DarkChapelFour')"
+              style="width: 25%"
+            >
+              Loot All
+            </button>
+            <button
+              onclick="resetAll('DarkChapel', 'DarkChapelFour')"
               style="width: 25%"
             >
               Reset All

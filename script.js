@@ -159,6 +159,18 @@ const dungeonArray = [
       },
     ],
   },
+  {
+    name: "DarkChapel",
+    chestGroups: [
+      {
+        name: "DarkChapelFour",
+        hours: 24,
+        numOfChests: 4,
+        lastLooted: [null, null, null, null],
+        timeRemaining: [null, null, null, null],
+      },
+    ],
+  },
 ];
 
 if (localStorage.getItem("timers")) {
